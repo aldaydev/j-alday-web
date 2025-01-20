@@ -1,0 +1,48 @@
+@media screen and (max-width: 1500px) {
+
+    .header__container{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    .header__container{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+
+    .nav__toggle{
+        display: inline-block;
+    }
+
+    .header__nav{
+        position: absolute;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .header__nav--opened{
+        justify-content: center;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: var(--color-black);
+        padding: 30px;
+    }
+
+    .nav__list{
+        flex-direction: column;
+    }
+
+    .toggle{
+        cursor: pointer;
+    }
+
+    .toggle__close{
+        display: none;
+    }
+}

@@ -33,10 +33,11 @@ p a {
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Helvetica;
     font-size: 1.5rem;
     font-weight: 400;
     background-color: var(--color-white);
+    max-width: 100dvw;
     height: 100dvh;
     position: relative;
 
@@ -47,12 +48,18 @@ body {
 /*----------ESTILOS HEADER----------*/
 
 .header{
-    background-color: #000000;
+    background-color: #0000007b;
+    width: 100%;
     height: 80px;
 
     display: flex;
     justify-content: center;
     align-items: center;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 100%;
 }
 
 .header__container{
@@ -61,12 +68,15 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .header__brand{
     display: block;
     color: var(--color-white);
-    font-size: 1.8rem;
+    font-size: 2rem;
+    margin-right: 100px;
+    text-wrap: nowrap;
 }
 
 .header__nav{
@@ -77,21 +87,62 @@ body {
 .nav__list{
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 25px;
 }
 
 .nav__link{
-    display: block;
     color: var(--color-white);
-    font-weight: bold;
-
+    font-size: 1.6rem;
+    
+    font-weight: 300;
+    text-wrap: nowrap;
     cursor: pointer;
+    position: relative;
+
+    transition: transform .2s ease-in-out;
+}
+
+/* .nav__link::after{
+    content: "";
+    width: 0%;
+    height: 1px;
+    background-color: var(--color-white);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: width .3s ease-in-out;
+} */
+
+/* .nav__link:hover::after{
+    width: 100%;
+} */
+
+.nav__link:hover{
+    transform: scale(1.1);
+}
+
+.nav__toggle{
+    display: none;
 }
 
 /*----------ESTILOS MAIN----------*/
 
 .main{
-    
+    min-height: calc(100dvh - 80px);
+    max-width: 100dvw;
+    overflow: hidden;
+}
+
+.main__presentation{
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.presentation__img{
+    object-fit: cover;
 }
 
 /*----------ESTILOS FOOTER----------*/

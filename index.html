@@ -6,20 +6,30 @@
 
 
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive-menu.css">
+
+    <script src="./assets/js/menu.js" defer></script>
 
     <title>Juan Alday</title>
 </head>
+
 <body>
+    <!---------- HEADER ---------->
     <header class="header">
         <div class="header__container">
             <a class="header__brand">
                 <h4 class="header__brand-text">Juan Alday</h4>
             </a>
 
+            <div class="nav__toggle">
+                <img src="./assets/icons/open-menu-icon.svg" alt="Open menu icon" class="toggle toggle__open">
+                <img src="./assets/icons/close-menu-icon.svg" alt="Open menu icon" class="toggle toggle__close">
+            </div>
+
             <nav class="header__nav">
                 <ul class="nav__list">
                     <li class="nav__item">
-                        <a href="./bio.html" class="nav__link">Bio</a>
+                        <a href="./bio.html" class="nav__link">Biography</a>
                     </li>
 
                     <li class="nav__item">
@@ -30,16 +40,40 @@
                         <a href="./bio.html" class="nav__link">Publications</a>
                     </li>
 
+                    <li class="nav__item">
+                        <a href="./bio.html" class="nav__link">Seminars</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./bio.html" class="nav__link">Awards</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./bio.html" class="nav__link">Projects</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./bio.html" class="nav__link">Funding</a>
+                    </li>
+
+                    <li class="nav__item">
+                        <a href="./bio.html" class="nav__link">Outreach & media</a>
+                    </li>
+
                 </ul>
             </nav>
         </div>
         
     </header>
-
+    <!---------- MAIN CONTENT ---------->
     <main class="main">
-
+        <section class="main__presentation">
+            <div class="presentation__container">
+                <img src="./assets/img/milky-way-bg.jpg" alt="Space background" class="presentation__img">
+            </div>
+        </section>
     </main>
-
+    <!---------- FOOTER ---------->
     <footer class="footer">
 
     </footer>
