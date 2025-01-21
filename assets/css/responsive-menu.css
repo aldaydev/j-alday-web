@@ -16,33 +16,45 @@
 
     .nav__toggle{
         display: inline-block;
+        position: relative;
     }
 
     .header__nav{
         position: absolute;
-        height: 0;
-        overflow: hidden;
+        top: 80px;
+        right: -246px;
+        background-color: var(--color-black-trans);
+        transition: right .3s ease-in-out;
     }
 
-    .header__nav--opened{
-        justify-content: center;
-        position: absolute;
-        top: 80px;
-        right: 0;
-        width: 100%;
+    .header__nav.header__nav--black{
         background-color: var(--color-black);
-        padding: 30px;
+    }
+
+    .header__nav.visible{
+        right: 0;
+        transition: right .3s ease-in-out;
     }
 
     .nav__list{
         flex-direction: column;
+        align-items: end;
+        height: auto;
+        padding: 20px 60px 40px 60px;
     }
 
     .toggle{
         cursor: pointer;
     }
 
-    .toggle__close{
-        display: none;
+    .toggle__open{
+        position: absolute;
+        top: 0;
+    }
+
+    .toggle__open.hidden,
+    .toggle__close.hidden{
+        opacity: 0;
+        visibility: hidden;
     }
 }

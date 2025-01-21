@@ -2,6 +2,7 @@
 
 :root {
     --color-black: #000000;
+    --color-black-trans: #0000007b;
     --color-white: #ffffff;
     --color-orange: #e9b03d;
 }
@@ -48,7 +49,6 @@ body {
 /*----------ESTILOS HEADER----------*/
 
 .header{
-    background-color: #0000007b;
     width: 100%;
     height: 80px;
 
@@ -60,6 +60,18 @@ body {
     top: 0;
     left: 0;
     right: 100%;
+    transition: background .2s ease-in-out;
+    z-index: 999;
+}
+
+.header--black{
+    background-color: var(--color-black);
+    transition: background .2s ease-in-out;
+}
+
+.header--black-trans{
+    background-color: var(--color-black-trans);
+    transition: background .4s ease-in-out;
 }
 
 .header__container{
@@ -88,6 +100,14 @@ body {
     display: flex;
     align-items: center;
     gap: 25px;
+    height: 80px;
+}
+
+.nav__item{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
 }
 
 .nav__link{
@@ -99,25 +119,10 @@ body {
     cursor: pointer;
     position: relative;
 
-    transition: transform .2s ease-in-out;
+    transition: transform .1s ease-in-out;
 }
 
-/* .nav__link::after{
-    content: "";
-    width: 0%;
-    height: 1px;
-    background-color: var(--color-white);
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    transition: width .3s ease-in-out;
-} */
-
-/* .nav__link:hover::after{
-    width: 100%;
-} */
-
-.nav__link:hover{
+.nav__item:hover > .nav__link{
     transform: scale(1.1);
 }
 
@@ -128,12 +133,82 @@ body {
 /*----------ESTILOS MAIN----------*/
 
 .main{
-    min-height: calc(100dvh - 80px);
+    min-height: calc(100dvh);
     max-width: 100dvw;
     overflow: hidden;
 }
 
-.main__presentation{
+/* SLIDER STYLES */
+
+/* Contenedor principal del slider */
+.slider-container {
+    width: 100%;
+    height: 100dvh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Slider (contenedor de los slides) */
+.slider {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Cada slide */
+.slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    z-index: 0;
+}
+
+/* Contenido dentro de cada slide */
+.content {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Botones de navegación */
+.arrow {
+    font-size: 4rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+}
+
+.arrow.left {
+    left: 25px;
+}
+
+.arrow.right {
+    right: 25px;
+}
+
+/* .main__presentation{
+    background-image: url("../img/milky-way-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
     height: 100dvh;
     overflow: hidden;
     display: flex;
@@ -141,9 +216,27 @@ body {
     justify-content: center;
 }
 
+.presentation__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.presentation__container > h1{
+    font-size: 4rem;
+    color: var(--color-white);
+}
+
+.presentation__container > h3{
+    font-size: 2.5rem;
+    color: var(--color-white);
+}
+
 .presentation__img{
     object-fit: cover;
-}
+} */
 
 /*----------ESTILOS FOOTER----------*/
 

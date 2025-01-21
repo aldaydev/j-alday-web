@@ -9,21 +9,22 @@
     <link rel="stylesheet" href="./assets/css/responsive-menu.css">
 
     <script src="./assets/js/menu.js" defer></script>
+    <script src="./assets/js/slider.js" defer></script>
 
     <title>Juan Alday</title>
 </head>
 
 <body>
     <!---------- HEADER ---------->
-    <header class="header">
+    <header class="header header--black-trans" id="header">
         <div class="header__container">
-            <a class="header__brand">
+            <a href="./index.html" class="header__brand">
                 <h4 class="header__brand-text">Juan Alday</h4>
             </a>
 
             <div class="nav__toggle">
-                <img src="./assets/icons/open-menu-icon.svg" alt="Open menu icon" class="toggle toggle__open">
-                <img src="./assets/icons/close-menu-icon.svg" alt="Open menu icon" class="toggle toggle__close">
+                <img src="./assets/icons/open-menu-icon.svg" alt="Open menu icon" class="toggle toggle__open" id="toggle__open">
+                <img src="./assets/icons/close-menu-icon.svg" alt="Open menu icon" class="toggle toggle__close hidden" id="toggle__close">
             </div>
 
             <nav class="header__nav">
@@ -67,11 +68,31 @@
     </header>
     <!---------- MAIN CONTENT ---------->
     <main class="main">
-        <section class="main__presentation">
+        <!-- <section class="main__presentation">
             <div class="presentation__container">
-                <img src="./assets/img/milky-way-bg.jpg" alt="Space background" class="presentation__img">
+                <h1>JUAN ALDAY PAREJO</h1>
+                <h3>DPhil in Atmospheric, Oceanic and Planetary Physics</h3>
             </div>
-        </section>
+        </section> -->
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide" style="background-image: url('./assets/img/milky-way-bg.jpg');">
+                    <h1>Slide 1</h1>
+                    <p>Descripción del primer slide</p>
+                </div>
+                <div class="slide" style="background-image: url('./assets/img/space-bg.jpg')";>
+                    <h2>Slide 2</h2>
+                    <p>Descripción del segundo slide</p>
+                </div>
+                <div class="slide" style="background-image: url('./assets/img/galaxy.jpg');">
+                    <h2>Slide 3</h2>
+                    <p>Descripción del tercer slide</p>
+                </div>
+            </div>
+            <button class="arrow left">❮</button>
+            <button class="arrow right">❯</button>
+        </div>
+        
     </main>
     <!---------- FOOTER ---------->
     <footer class="footer">

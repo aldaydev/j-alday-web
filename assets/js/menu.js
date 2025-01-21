@@ -1,7 +1,48 @@
-const openToggle = document.querySelector('.toggle__open');
-const closeToggle = document.querySelector('.toggle__close');
+const openToggle = document.getElementById('toggle__open');
+const closeToggle = document.getElementById('toggle__close');
 const headerNav = document.querySelector('.header__nav');
 
 openToggle.addEventListener('click', (e)=>{
-    headerNav.classList.add('.header__nav--opened');
+    openToggle.classList.toggle('hidden');
+    closeToggle.classList.toggle('hidden');
+    headerNav.classList.add('visible');
+})
+
+closeToggle.addEventListener('click', (e)=>{
+    openToggle.classList.toggle('hidden');
+    closeToggle.classList.toggle('hidden');
+    headerNav.classList.remove('visible');
+})
+
+window.addEventListener('resize', ()=>{
+
+    const isVisible = document.querySelector('.visible');
+
+    if(isVisible){
+        headerNav.classList.remove('visible');
+        openToggle.classList.remove('hidden');
+        closeToggle.classList.add('hidden');
+    }
+
+})
+
+window.addEventListener('scroll', ()=>{
+
+    const isVisible = document.querySelector('.visible');
+    if(isVisible){
+        headerNav.classList.remove('visible');
+        openToggle.classList.remove('hidden');
+        closeToggle.classList.add('hidden');
+    }
+
+    const header = document.getElementById('header');
+    if(window.scrollY > 0){
+        header.classList.remove('header--black-trans');
+        header.classList.add('header--black');
+        headerNav.classList.add('header__nav--black');
+    }else{
+        header.classList.remove('header--black');
+        header.classList.add('header--black-trans');
+        headerNav.classList.remove('header__nav--black');
+    }
 })
