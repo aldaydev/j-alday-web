@@ -170,14 +170,43 @@ body {
     text-align: center;
     padding: 20px;
     z-index: 0;
+
+    display: flex;
+    flex-direction: column;
 }
 
-/* Contenido dentro de cada slide */
-.content {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-    padding: 20px;
-    border-radius: 10px;
+.slide__content{
+    max-width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 }
+
+.slide__title{
+    padding: 10px 40px;
+    font-size: 3.5rem;
+    border: 5px solid var(--color-white);
+    background-color: var(--color-black-trans);
+    animation: sliderTitle .5s ease-in-out both;
+}
+
+.slide__subtitle{
+    text-wrap: pretty;
+}
+
+@keyframes sliderTitle {
+    from{
+        transform: scale(1.1);
+        opacity: 0;
+    }to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
 
 /* Botones de navegación */
 .arrow {
@@ -203,45 +232,40 @@ body {
     right: 25px;
 }
 
-/* .main__presentation{
-    background-image: url("../img/milky-way-bg.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    height: 100dvh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.presentation__container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-}
-
-.presentation__container > h1{
-    font-size: 4rem;
-    color: var(--color-white);
-}
-
-.presentation__container > h3{
-    font-size: 2.5rem;
-    color: var(--color-white);
-}
-
-.presentation__img{
-    object-fit: cover;
-} */
-
 /*----------ESTILOS FOOTER----------*/
 
 .footer{
-    background-color: #000000;
-    height: 80px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+.footer__container{
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footeer__address{
+    font-size: 1.6rem;
+}
+
+.footerLinks__icons{
+    display: flex;
+    gap: 20px;
+}
+
+.footerLinks__icon{
+    width: 40px;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+
+.footerLinks__icon:hover{
+    transform:scale(1.1)
+}
+
+.footerLinks__links a{
+    color: var(--color-white);
 }
 
