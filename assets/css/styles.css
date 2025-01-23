@@ -84,11 +84,30 @@ body {
 }
 
 .header__brand{
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 15px;
     color: var(--color-white);
     font-size: 2rem;
     margin-right: 100px;
     text-wrap: nowrap;
+}
+
+.header__brand:hover .header__brand-logo{
+    transform:rotate(180deg);
+}
+
+.header__brand:hover .header__brand-text{
+    letter-spacing: 0.5px;
+}
+
+.header__brand-logo{
+    transition: transform .3s ease-in-out;
+}
+
+.header__brand-text{
+    margin-top: 2px;
+    transition: letter-spacing .3s ease-in-out;
 }
 
 .header__nav{

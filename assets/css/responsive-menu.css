@@ -12,11 +12,11 @@
     }
 
     .header__brand{
-        margin-right: 78px;
+        margin-right: 60px;
     }
 }
 
-@media screen and (max-width: 1080px) {
+@media screen and (max-width: 1120px) {
 
     .nav__toggle{
         display: inline-block;
