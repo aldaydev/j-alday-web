@@ -68,29 +68,68 @@
         </div>
         
     </header>
+
     <!---------- MAIN CONTENT ---------->
     <main class="main">
 
         <div class="slider-container">
             <div class="slider">
 
-                <div class="slide" style="background-image: url('./assets/img/milky-way-bg.jpg');">
+                <section class="slide" style="background-image: url('./assets/img/milky-way-bg.jpg');">
                     <div class="slide__content">
-                        <h1 class="slide__title">JUAN ALDAY</h1>
-                        <h2 class="slide__subtitle">DPhil in Atmospheric, Oceanic and Planetary Physics</h2>
-                    </div>
-                    
-                </div>
+                        <h1 class="slide__publications-title">PUBLICATIONS</h1>
 
-                <div class="slide" style="background-image: url('./assets/img/mars-atmosphere.webp')";>
+                        <div class="publications__content">
+                            
+                            <div class="publication lastest__publication">
+                                <h3 class="publication__type">LATEST</h3>
+                                <div class="publication__info-container">
+                                    
+                                    <img src="./assets/img/publications-img/space-science-reviews-img.png" alt="Space Science Reviews image" class="publication__img">
+                                    
+                                    <div class="publication__data-container">
+                                        <h3 class="publication__title">Mars’ Water Cycle and Escape: A View from Mars Express and Beyond</h3>
+                                        <p class="publication__authors">Montmessin et al. (2024)</p>
+                                        <p class="publication__site">Space Science Reviews</p>
+                                    </div>
+                                </div>           
+                            </div>
+
+                            <div class="publication featured__publication">
+                                <h3 class="publication__type">FEATURED</h3>
+                                <div class="publication__info-container">
+
+                                    
+                                    <img src="./assets/img/publications-img/royal-astronomica-society-img.png" alt="Space Science Reviews image" class="publication__img">
+                                    
+                                    <div class="publication__data-container">
+                                        <h3 class="publication__title">Upper limits of HO2 in the atmosphere of Mars from the ExoMars Trace Gas Orbiter</h3>
+                                        <p class="publication__authors">Alday et al. (2024)</p>
+                                        <p class="publication__site">Monthly Notices of the Royal Astronomical Society</p>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+
+                        <a href="./publications.html" class="slide__button">
+                            <h3>CLICK HERE TO SEE ALL PUBLICATIONS</h3>
+                        </a>
+                        
+                    </div>  
+                </section>
+
+                <section class="slide" style="background-image: url('./assets/img/mars-atmosphere.webp')";>
                     <h2>Slide 2</h2>
                     <p>Descripción del segundo slide</p>
-                </div>
+                </section>
 
-                <div class="slide" style="background-image: url('./assets/img/galaxy.jpg');">
+                <section class="slide" style="background-image: url('./assets/img/galaxy.jpg');">
                     <h2>Slide 3</h2>
                     <p>Descripción del tercer slide</p>
-                </div>
+                </section>
 
             </div>
             <button class="arrow left">❮</button>
