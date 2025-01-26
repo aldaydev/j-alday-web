@@ -1,0 +1,15 @@
+/* Fuente normal */
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: normal; /* Peso regular */
+    font-style: normal; /* Sin cursiva */
+}
+
+/* Fuente italic */
+@font-face {
+    font-family: 'Roboto';
+    src: url('./Roboto-Italic-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: normal; /* Mismo peso */
+    font-style: italic; /* Cursiva */
+}

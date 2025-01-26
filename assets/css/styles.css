@@ -35,8 +35,8 @@ p a {
 }
 
 body {
-    font-family: Helvetica;
-    font-size: 1.5rem;
+    font-family: Poppins;
+    font-size: 1.6rem;
     font-weight: 400;
     background-color: var(--color-white);
     max-width: 100dvw;
@@ -89,7 +89,7 @@ body {
     align-items: center;
     gap: 15px;
     color: var(--color-white);
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin-right: 100px;
     text-wrap: nowrap;
 }
@@ -154,6 +154,7 @@ body {
 
 .main{
     min-height: calc(100dvh);
+    min-width: 100dvw;
     max-width: 100dvw;
     overflow: hidden;
 }
@@ -203,20 +204,25 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 25px;
     width: 90%;
 }
 
 .slide__title{
     padding: 10px 20px;
-    font-size: 2.8rem;
-    border: 3px solid var(--color-white);
-    border-radius: 5px;
-    background-color: var(--color-black-trans);
-    border-top: 4px solid var(--color-white);
-    border-bottom: 4px solid var(--color-white);
+    font-size: 3rem;
     animation: sliderTitle .5s ease-in-out both;
     text-shadow: 0 0 10px var(--color-black);
+}
+
+.slide__button{
+    font-size: 1.4rem;
+    margin-top: 20px;
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: var(--box-shadow);
 }
 
 /* Estilos SLIDE 1 | PRESENTATION */
@@ -226,13 +232,24 @@ body {
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     gap: 20px;
+     /* gap: 10px; */
+}
+
+.presentation__subtitle{
+    font-size: 2rem;
 }
 
 .presentation__img{
-    padding: 15px;
+    padding: 5px 15px 15px 15px;
     /* background-color: var(--color-white); */
-    width: 200px;
+    width: 230px;
+}
+
+.presentation__buttons{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
 
@@ -285,14 +302,7 @@ body {
     gap: 10px;
 }
 
-.slide__button{
-    margin-top: 20px;
-    background-color: var(--color-white);
-    color: var(--color-black);
-    border-radius: 15px;
-    padding: 20px;
-    box-shadow: var(--box-shadow);
-}
+
 
 
 /* Botones de navegación */

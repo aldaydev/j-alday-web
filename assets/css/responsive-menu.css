@@ -16,19 +16,27 @@
     }
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1250px) {
 
+
+    .header__brand{
+        font-size: 1.7rem;
+        gap: 10px;
+    }
+
+    .nav__link{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 1120px) {
 
     .header__container{
         width: 95%;
     }
 
-    .header__brand{
-        font-size: 1.8rem;
-    }
-
     .nav__link{
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 }
 
@@ -42,7 +50,7 @@
     .header__nav{
         position: absolute;
         top: 80px;
-        right: -266px;
+        right: -290px;
         background-color: var(--color-black-trans);
         transition: right .3s ease-in-out;
     }
@@ -64,7 +72,7 @@
     }
 
     .nav__link{
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .toggle{
